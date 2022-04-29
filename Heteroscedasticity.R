@@ -13,8 +13,8 @@ summary(lm(y~x))
 plot(x=x,y=y)
 
 #hetero
-X <- 1:500
-Y <- rnorm(n = 500, mean = X, sd = 0.6 * X)
+X <- 1:1000
+Y <- rnorm(n =1000, mean = X, sd = 0.6 * X)
 
 # estimate a simple regression model
 reg <- lm(Y ~ X)
