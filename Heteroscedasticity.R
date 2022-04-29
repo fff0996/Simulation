@@ -1,21 +1,18 @@
 #homo
+#The "base" model is Y=0.5 + 0.5X1 + e
 x <- 1:1000
-mer <- data.frame(mer)
-mer2 <- mer[ mer$X < 510,]
-mer2 <- mer2[ mer2$X > 490,]
-#calulate mean of error in the mideian group
-mean(mer2$Y)
-sd(mer2$Y)
+#make error (constant variance of error)
 y <- NULL
-err <- sample(x=-580:580,size=1000,replace=TRUE)
-y <- x +err
+err <- rnormn=1000,mean=(0.5*x + 0.5),sd=100)
+y <- 0.5 + 0.5*x + error
 summary(lm(y~x))
 plot(x=x,y=y)
 
 #hetero
+#The "base" model is Y= 0.5 + 0.5X1 + e
 X <- 1:1000
-Y <- rnorm(n =1000, mean = X, sd = 0.6 * X)
-
+error <- rnorm(n =1000, mean=(0.5*X + 0.5),sd = 0.6 * X)
+Y <- 0.5 + 0.5*X + error
 # estimate a simple regression model
 reg <- lm(Y ~ X)
 # plot the data
