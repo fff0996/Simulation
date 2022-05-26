@@ -3,7 +3,7 @@
 x <- 1:1000
 #make error (constant variance of error)
 y <- NULL
-err <- rnorm(n=1000,mean=(0.5*x + 0.5),sd=108)
+error <- rnorm(n=1000,mean=(0.5*x + 0.5),sd=108)
 y <- 0.5 + 0.5*x + error
 summary(lm(y~x))
 homo <- data.frame(x,y)
