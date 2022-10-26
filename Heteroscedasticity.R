@@ -27,6 +27,12 @@ Y <- 0.5 + 0.5*X + error
 hete <- data.frame(X,Y)
 ggplot(hete,aes(X,Y,group=1)) + geom_point() + labs(x="",y="")
 
+#low degree heteroscedasticity
+error <- rnorm(n=1000,mean=0,sd=0.03*X + 40)
+Y <- 0.5 + 0.5*X + error
+r <- data.frame(X,Y)
+ggplot(hete,aes(X,Y,group=1)) + geom_point() + labs(x="",y="")
+
 
 #Decrease heterscedasticity
 #The "base" model is Y = 0.5 + 0.5*X1 + e
