@@ -28,7 +28,7 @@ middle_hete <- data.frame(X,Y)
 ggplot(middle_hete,aes(X,Y,group=1)) + geom_point() + labs(x="",y="")
 
 #low degree heteroscedasticity
-error <- rnorm(n=1000,mean=0,sd=0.04*X + 60)
+error <- rnorm(n=2000,mean=0,sd=0.04*X + 60)
 Y <- 0.5 + 0.5*X + error
 low_hete <- data.frame(X,Y)
 ggplot(low_hete,aes(X,Y,group=1)) + geom_point() + labs(x="",y="")
