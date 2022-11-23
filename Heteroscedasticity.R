@@ -1,6 +1,6 @@
 #homoscedasticity
 #The "base" model is Y=0.5 + 0.5X1 + e
-X <- 1:1000
+X <- 1:2000
 #make error (constant variance of error)
 Y <- NULL
 error <- rnorm(n=2000,mean= 0,sd=55)
